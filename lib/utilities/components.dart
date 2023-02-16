@@ -243,23 +243,3 @@ class redircetText extends StatelessWidget {
     );
   }
 }
-
-/*
-class redircetText extends StatelessWidget {
-  redircetText({required this.text});
-  String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(
-        fontSize: 15,
-        fontFamily: 'Poppins',
-        fontWeight: FontWeight.w200,
-        color: Color(0xFFFF757C),
-      ),
-    );
-  }
-}
-*/

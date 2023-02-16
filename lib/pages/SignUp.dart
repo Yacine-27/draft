@@ -17,7 +17,7 @@ class _SignUpState extends State<SignUp> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 25),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 45),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
