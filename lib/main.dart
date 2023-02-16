@@ -1,6 +1,5 @@
+import 'package:draft/pages/LogIn.dart';
 import 'package:flutter/material.dart';
-
-import 'pages/Sign_up.dart';
 
 void main() {
   runApp(const Draft());
@@ -14,7 +13,7 @@ class Draft extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: SignUp(),
+      home: LogIn(),
     );
   }
 }

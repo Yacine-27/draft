@@ -49,5 +49,5 @@ final kGoogleIcon = Icon(
 final kFacebookIcon = Icon(
   Icons.facebook,
   color: Colors.blue,
-  size: 36-,
+  size: 36,
 );

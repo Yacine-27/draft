@@ -1,7 +1,6 @@
+import 'package:draft/utilities/components.dart';
 import 'package:draft/utilities/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../utilities/components.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -28,31 +27,45 @@ class _SignUpState extends State<SignUp> {
               ),
               Expanded(
                 flex: 1,
-                child: topBoldText(),
+                child: topBoldText(
+                  text: "Hello !",
+                ),
               ),
               Expanded(
                 flex: 1,
-                child: topGreyText(),
+                child: topGreyText(text: "Create Your account"),
               ),
               Expanded(
-                flex: 4,
+                flex: 5,
                 child: Column(
                   children: [
-                    const InputField(hintText: 'User Name', icon: Icons.person),
+                    const InputField(
+                      hintText: 'Email',
+                      icon: Icons.email,
+                      invisible: false,
+                    ),
                     SizedBox(
                       height: 20,
                     ),
-                    const InputField(hintText: 'Password', icon: Icons.lock),
+                    const InputField(
+                        hintText: 'User Name',
+                        icon: Icons.person,
+                        invisible: false),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    const InputField(
+                        hintText: 'Password',
+                        icon: Icons.lock,
+                        invisible: true),
                   ],
                 ),
               ),
               Expanded(
                 flex: 1,
-                child: rightText(),
-              ),
-              Expanded(
-                flex: 1,
-                child: wideActionButton(hint: 'Log in'),
+                child: wideActionButton(
+                  hint: "Sign Up",
+                ),
               ),
               Expanded(
                 flex: 1,
@@ -85,11 +98,16 @@ class _SignUpState extends State<SignUp> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    bottomConstantText(),
+                    bottomConstantText(text: "Already have an account ?"),
                     SizedBox(
                       width: 10,
                     ),
-                    redircetText(),
+                    redircetText(
+                      text: "Log in here",
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
                   ],
                 ),
               ),

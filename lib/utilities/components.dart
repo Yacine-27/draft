@@ -16,14 +16,14 @@ class KtopLogo extends StatelessWidget {
 }
 
 class topBoldText extends StatelessWidget {
-  const topBoldText({
-    Key? key,
-  }) : super(key: key);
+  topBoldText({required this.text});
+
+  String text;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      "Welcome Back !",
+      text,
       textAlign: TextAlign.center,
       style: kTopBoldTextStyle,
     );
@@ -31,14 +31,14 @@ class topBoldText extends StatelessWidget {
 }
 
 class topGreyText extends StatelessWidget {
-  const topGreyText({
-    Key? key,
-  }) : super(key: key);
+  topGreyText({required this.text});
+
+  String text;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      "Log in to your account",
+      text,
       textAlign: TextAlign.center,
       style: kTopGreyTextStyle,
     );
@@ -46,14 +46,13 @@ class topGreyText extends StatelessWidget {
 }
 
 class bottomConstantText extends StatelessWidget {
-  const bottomConstantText({
-    Key? key,
-  }) : super(key: key);
+  bottomConstantText({required this.text});
+  String text;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      'don\'t have an account?',
+      text,
       style: TextStyle(
         fontSize: 15,
         fontFamily: 'Poppins',
@@ -185,10 +184,15 @@ class rightText extends StatelessWidget {
 }
 
 class InputField extends StatelessWidget {
-  const InputField({super.key, required this.hintText, required this.icon});
+  const InputField(
+      {super.key,
+      required this.hintText,
+      required this.icon,
+      required this.invisible});
 
   final String hintText;
   final IconData icon;
+  final bool invisible;
 
   @override
   Widget build(BuildContext context) {
@@ -197,6 +201,7 @@ class InputField extends StatelessWidget {
       decoration: kInputFieldStyle,
       height: 60.0,
       child: TextField(
+        obscureText: invisible,
         keyboardType: TextInputType.emailAddress,
         style: TextStyle(
           color: Colors.grey,
@@ -218,14 +223,36 @@ class InputField extends StatelessWidget {
 }
 
 class redircetText extends StatelessWidget {
-  const redircetText({
-    Key? key,
-  }) : super(key: key);
+  redircetText({required this.text, required this.onPressed});
+  String text;
+  void Function() onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onPressed,
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 15,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w200,
+          color: Color(0xFFFF757C),
+        ),
+      ),
+    );
+  }
+}
+
+/*
+class redircetText extends StatelessWidget {
+  redircetText({required this.text});
+  String text;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      'sign up here',
+      text,
       style: TextStyle(
         fontSize: 15,
         fontFamily: 'Poppins',
@@ -235,3 +262,4 @@ class redircetText extends StatelessWidget {
     );
   }
 }
+*/
