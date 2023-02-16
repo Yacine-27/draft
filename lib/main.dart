@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 
-import 'Sign_up.dart';
+import 'pages/Sign_up.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Draft());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Draft extends StatelessWidget {
+  const Draft({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: Sign_up(),
+      home: SignUp(),
     );
   }
 }
