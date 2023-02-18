@@ -63,7 +63,6 @@ flutter:
   assets:
     - images/EgyGuide.png
     - images/google_logo.png
-    - images/facebook_logo.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

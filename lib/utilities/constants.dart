@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const Color kPink = Color(0xFFFF757C);
 const Color kGreyText = Color(0xFF898A8D);
+const Color kGreen = Color(0xFF1CBEB2);
 
 final kTopGreyTextStyle = TextStyle(
   fontFamily: 'Poppins',

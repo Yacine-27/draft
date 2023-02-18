@@ -1,3 +1,4 @@
+import 'package:draft/pages/ForgetPassword.dart';
 import 'package:flutter/material.dart';
 
 import 'constants.dart';
@@ -160,23 +161,29 @@ class wideActionButton extends StatelessWidget {
   }
 }
 
-class rightText extends StatelessWidget {
-  const rightText({
-    Key? key,
-  }) : super(key: key);
+class RightText extends StatelessWidget {
+  const RightText({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(right: 25),
-      child: Text(
-        'Forget password ?',
-        textAlign: TextAlign.right,
-        style: TextStyle(
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w400,
-          fontSize: 16,
-          color: kGreyText,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const ForgetPassword()),
+        );
+      },
+      child: Container(
+        padding: EdgeInsets.only(right: 25),
+        child: Text(
+          'Forget password ?',
+          textAlign: TextAlign.right,
+          style: TextStyle(
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w400,
+            fontSize: 16,
+            color: kGreyText,
+          ),
         ),
       ),
     );
