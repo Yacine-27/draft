@@ -68,7 +68,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   children: [
                     InputField(
                         hintText: "Enter your phone number",
-                        icon: Icons.phone,
+                        icon: Icons.phone_android,
                         invisible: false),
                     SizedBox(
                       height: 20,

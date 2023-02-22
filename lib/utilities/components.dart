@@ -229,6 +229,37 @@ class InputField extends StatelessWidget {
   }
 }
 
+class WhiteInputField extends StatelessWidget {
+  const WhiteInputField({Key? key, required this.hintText}) : super(key: key);
+
+  final String hintText;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.centerLeft,
+      height: 60,
+      decoration: kWhiteInputFieldStyle,
+      child: TextField(
+        keyboardType: TextInputType.emailAddress,
+        textAlign: TextAlign.left,
+        style: TextStyle(
+          color: Colors.grey,
+          fontFamily: 'Poppins',
+        ),
+        decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: kGreen, width: 2.0),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          contentPadding: EdgeInsets.only(top: 14.0, left: 18),
+          hintText: hintText,
+          hintStyle: kHintTextStyle,
+        ),
+      ),
+    );
+  }
+}
+
 class redircetText extends StatelessWidget {
   redircetText({required this.text, required this.onPressed});
   String text;

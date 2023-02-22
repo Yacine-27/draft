@@ -1,4 +1,4 @@
-import 'package:draft/pages/LogIn.dart';
+import 'package:draft/pages/createPost.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class Draft extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: LogIn(),
+      home: (CreatePost()),
     );
   }
 }

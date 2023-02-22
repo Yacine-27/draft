@@ -52,3 +52,8 @@ final kFacebookIcon = Icon(
   color: Colors.blue,
   size: 36,
 );
+
+final kWhiteInputFieldStyle = BoxDecoration(
+  color: Colors.white,
+  borderRadius: BorderRadius.circular(20.0),
+);
